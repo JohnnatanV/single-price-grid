@@ -20,7 +20,6 @@
 
 body {
   background: var(--light-gray);
-  height: 100vh;
   display: flex;
   flex-direction: column;
 }
@@ -102,6 +101,7 @@ body {
   border: none;
   border-radius: 0.3rem;
   box-shadow: 0 0.4rem 0.5rem hsl(179, 62%, 35%);
+  cursor: pointer;
   transition: all 0.5s;
 }
 
@@ -122,9 +122,10 @@ body {
   margin-bottom: 0.9rem;
 }
 
-.about-us__text {
-  font-size: 0.9rem;
-  line-height: 130%;
+.about-us__item-list {
+  font-size: 0.8rem;
+  line-height: 140%;
+  list-style: none;
 }
 /* FOOTER */
 
@@ -137,18 +138,22 @@ body {
 }
 
 @media screen and (min-width: 750px) {
+  * {
+    font-size: 17px;
+  }
+
   .box {
     padding: 2rem 2rem;
   }
 
   body {
-    height: 80vh;
+    height: 100vh;
     align-items: center;
     justify-content: center;
   }
 
   .container {
-    max-width: 585px;
+    max-width: 620px;
     margin: auto;
     grid-template-columns: repeat(2, auto);
     grid-template-rows: repeat(2, auto);
