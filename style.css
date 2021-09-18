@@ -20,19 +20,21 @@
 
 body {
   background: var(--light-gray);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .container {
   display: grid;
   grid-template-columns: auto;
   grid-template-rows: repeat(3, auto);
-  margin: 1rem;
+  margin: 3rem auto;
   color: #fff;
+  max-width: 340px;
 }
 
-.tittle,
-.subscription,
-.about-us {
+.box {
   padding: 2rem 1.4rem;
 }
 
@@ -40,6 +42,7 @@ body {
 
 .tittle {
   background: #fff;
+  border-radius: 0.4rem 0.4rem 0 0;
 }
 
 .tittle__main {
@@ -81,7 +84,7 @@ body {
 }
 
 .subscription__cost-text {
-  color: var(--light-gray);
+  color: hsl(217, 34%, 82%);
   font-size: 0.9rem;
   font-weight: 400;
 }
@@ -99,12 +102,19 @@ body {
   border: none;
   border-radius: 0.3rem;
   box-shadow: 0 0.4rem 0.5rem hsl(179, 62%, 35%);
+  transition: all 0.5s;
+}
+
+.subscription__btn:hover {
+  background: var(--light-gray);
+  color: var(--cyan);
 }
 
 /* ASIDE */
 
 .about-us {
   background: hsl(178, 48%, 59%);
+  border-radius: 0 0 0.4rem 0.4rem;
 }
 
 .about-us__tittle {
@@ -124,6 +134,43 @@ body {
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+@media screen and (min-width: 750px) {
+  .box {
+    padding: 2rem 2rem;
+  }
+
+  body {
+    height: 80vh;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .container {
+    max-width: 585px;
+    margin: auto;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(2, auto);
+  }
+
+  .tittle {
+    grid-column: 1 / 3;
+  }
+
+  .subscription {
+    border-radius: 0 0 0 0.4rem;
+  }
+
+  .about-us {
+    border-radius: 0 0 0.4rem 0;
+  }
+}
+
+@media screen and (min-width: 1024) {
+  .container {
+    max-width: 900px;
+  }
 }
 
 /* 
