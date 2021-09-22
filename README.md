@@ -23,8 +23,8 @@ Users should be able to:
 
 ### Screenshot
 
-![Mobile](./screenshots/single-card-price-mobile.jpg)
-![Desktop](./screenshots/single-card-price-dektop.jpg)
+![Mobile](./screenshots/single-card-price-mobile.png)
+![Desktop](./screenshots/single-card-price-dektop.png)
 
 ### Links
 
